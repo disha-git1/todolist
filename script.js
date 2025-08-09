@@ -1,4 +1,4 @@
-// Load tasks from localStorage on page load
+
 window.onload = function () {
   loadTasks();
 };
@@ -12,13 +12,13 @@ function addTask() {
   li.innerHTML = `${taskText} <span class="delete-btn" onclick="deleteTask(this)">🗑️</span>`;
   document.getElementById("taskList").appendChild(li);
 
-  saveTasks(); // update storage
+  saveTasks(); 
   input.value = ""; // clear input
 }
 
 function deleteTask(elem) {
   elem.parentElement.remove();
-  saveTasks(); // update storage
+  saveTasks();
 }
 
 function saveTasks() {
